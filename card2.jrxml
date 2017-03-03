@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="147" pageHeight="237" whenNoDataType="NoDataSection" columnWidth="147" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="8728e388-e376-4b0b-a6f2-7ecf4f6a627d">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="CompName" forecolor="#FFFFFF" fill="Solid" hAlign="Center" vAlign="Middle" fontName="Calibri" fontSize="16" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<paragraph lineSpacing="1_1_2"/>
+	</style>
+	<style name="name" forecolor="#FFFFFF" hAlign="Justified" vAlign="Middle" fontSize="11" isBold="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="id" forecolor="#FF0000" hAlign="Justified" vAlign="Middle" fontSize="9" isUnderline="false" isStrikeThrough="false"/>
+	<field name="comp" class="java.lang.String"/>
+	<field name="nama" class="java.lang.String"/>
+	<field name="id" class="java.lang.String"/>
+	<field name="foto" class="java.lang.String"/>
+	<background>
+		<band height="237" splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="237" splitType="Prevent">
+			<image>
+				<reportElement x="0" y="0" width="147" height="237" uuid="600e9283-d62c-476f-9c6a-23cad50a534b"/>
+				<imageExpression><![CDATA["/home/ai/NetBeansProjects/CardMaker/cherry.jpg"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement x="0" y="0" width="147" height="237" uuid="4fbeded2-2f6d-40e5-9310-ddfe996aa8fe"/>
+				<textField>
+					<reportElement style="CompName" x="0" y="0" width="147" height="52" uuid="fc4169f5-1331-41a1-9995-0c078fdbfba3"/>
+					<textFieldExpression><![CDATA[$F{comp}]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="30" y="73" width="82" height="72" uuid="e1957033-55aa-4450-9648-d61bbd21076e"/>
+					<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement style="name" x="12" y="157" width="123" height="20" uuid="6a484915-e47b-4d69-949e-a89a03ae41fc"/>
+					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="id" x="30" y="205" width="82" height="20" uuid="e71a61ac-f208-45ad-a7e9-7a01786c3d6e"/>
+					<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>
